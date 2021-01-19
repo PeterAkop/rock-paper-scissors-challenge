@@ -1,0 +1,30 @@
+.winner {
+  font-size: 10rem;
+  text-align: center;
+}
+
+.button {
+  font-size: 3rem;
+  height: 10rem;
+  width: 10rem;
+  border: none;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:  7px 7px 12px #e6e6e6, 
+               -7px -7px 12px #ffffff;
+}
+
+.button:active {
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: inset 7px 7px 12px #e6e6e6, 
+              inset -7px -7px 12px #ffffff;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
