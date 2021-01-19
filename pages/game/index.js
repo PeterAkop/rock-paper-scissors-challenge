@@ -8,9 +8,11 @@ const Game = () => {
   const [result, setResult] = useState(null);
 
   const playGame = (gesture) => {
-    play(gesture).then(({ message }) => {
-      setResult(message);
-    });
+    play(gesture)
+      .then(({ message }) => {
+        setResult(message);
+      })
+      .catch((error) => console.error(error));
   };
 
   const handleClick = () => setResult(null);
@@ -21,7 +23,7 @@ const Game = () => {
         <div className={styles.winnerWrapper}>
           <h1>{result}</h1>
           <span onClick={handleClick}>
-            Click here or refresh the page to start over
+            Click here or refresh the page to start over!
           </span>
         </div>
       </div>

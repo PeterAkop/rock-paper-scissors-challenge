@@ -1,10 +1,15 @@
 import { playGame } from "./_helpers.js";
 import { gestures } from "../../../utils/game.enum";
 
-// Validation can be added to end point
 export default (req, res) => {
   const { gesture } = JSON.parse(req.body);
-  const results = playGame({ playerGesture: gesture });
-  res.statusCode = 200;
-  res.json(results);
+  // minimum validation
+  if (!gestures[gesture]) {
+    res.statusCode = 400;
+    res.json({ error: "invalid gest" });
+  } else {
+    const results = playGame({ playerGesture: gesture });
+    res.statusCode = 200;
+    res.json(results);
+  }
 };
