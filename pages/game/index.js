@@ -32,7 +32,12 @@ const Game = () => {
   return (
     <div className={styles.container}>
       {Object.keys(gestures).map((k) => (
-        <button className={styles.button} key={k} onClick={() => playGame(k)}>
+        <button
+          data-testid={"game-option"}
+          className={styles.button}
+          key={k}
+          onClick={() => playGame(k)}
+        >
           {k}
         </button>
       ))}
