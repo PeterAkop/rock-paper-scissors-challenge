@@ -1,6 +1,18 @@
+import { gestures } from "../../../utils/game.enum";
+
 export const playGame = ({ playerGesture }) => {
+  let keys = Object.keys(gestures);
 
-  // game logic here
+  const index = Math.floor(Math.random() * keys.length);
+  const computerGesture = keys[index];
 
-  return { winner: "computer" };
-}
+  let message = "user wins";
+
+  if (gestures[computerGesture].includes(playerGesture)) {
+    message = "computer wins";
+  } else if (computerGesture === playerGesture) {
+    message = "draw game";
+  }
+
+  return { message };
+};
