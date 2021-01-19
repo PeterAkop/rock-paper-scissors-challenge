@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from "next/head";
+import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -9,9 +9,13 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 data-testid={'home-id'}>Rock Paper Scissors</h1>
-        <Link href="/game" to="/game">Play!</Link>
+        <h1 data-testid={"home-id"}>Rock Paper Scissors</h1>
+        <Link href="/game" to="/game">
+          Play!
+        </Link>
       </main>
     </div>
-  )
-}
+  );
+};
+
+export default Home;

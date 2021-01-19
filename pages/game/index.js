@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { play } from "./_helpers.js";
-import styles from "../../styles/Game.module.css";
+import styles from "../../styles/game.module.css";
 import { gestures } from "../../utils/game.enum";
 
 const Game = () => {
