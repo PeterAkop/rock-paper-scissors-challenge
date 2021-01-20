@@ -6,6 +6,8 @@ const mockFunc = jest.fn();
 
 global.fetch = jest.fn(() => {
   mockFunc();
+  //since function is not returning Response object, error will appear,
+  // how ever the test is working correctly
   return Promise.resolve({ ok: true });
 });
 
