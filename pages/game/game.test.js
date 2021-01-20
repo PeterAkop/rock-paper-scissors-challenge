@@ -9,8 +9,8 @@ global.fetch = jest.fn(() => {
   return Promise.resolve({ ok: true });
 });
 
-describe("check request on option click", () => {
-  it("home page is rendered", () => {
+describe("Game", () => {
+  it("check request on option click", () => {
     const { getAllByTestId } = render(<Game />);
     const options = getAllByTestId(/game-option/i);
 
